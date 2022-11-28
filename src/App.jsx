@@ -12,12 +12,12 @@ function App() {
 
 
   useEffect(() =>{
-    axios.get('https://users-crud1.herokuapp.com/users/')
+    axios.get('http://144.126.218.162:9000/users/')
     .then(res => setUsers(res.data))
   },[])
 
   const getUsers = () => {
-    axios.get('https://users-crud1.herokuapp.com/users/')
+    axios.get('http://144.126.218.162:9000/users/')
     .then(res => setUsers(res.data))
   }
 
@@ -26,7 +26,7 @@ function App() {
    }
 
   const deleteUser = (id) =>{
-    axios.delete(`https://users-crud1.herokuapp.com/users/${id}/`)
+    axios.delete(`http://144.126.218.162:9000/users/${id}/`)
     .then(() => getUsers())
   }
 

@@ -23,13 +23,13 @@ const UsersForm = ({getUsers, userSelected}) => {
     
     const submit = (data) =>{
         if(userSelected){
-            axios.put(`https://users-crud1.herokuapp.com/users/${userSelected.id}/`, data)
+            axios.put(`http://144.126.218.162:9000/users/${userSelected.id}/`, data)
             .then(()=> {
                 getUsers()
                 reset(initialValue)
             })
         }else{
-            axios.post('https://users-crud1.herokuapp.com/users/', data)
+            axios.post('http://144.126.218.162:9000/users/', data)
             .then(() => {
                 getUsers()
                 reset(initialValue)
